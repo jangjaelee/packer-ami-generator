@@ -1,0 +1,5 @@
+- name: install nginx
+  yum: pkg={{item}} state=latest
+  with_items:
+    - nginx
+  notify: "enable nginx"

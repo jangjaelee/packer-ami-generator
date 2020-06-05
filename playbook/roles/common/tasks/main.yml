@@ -1,0 +1,67 @@
+# for Amazon Linux 2
+- name: install epel-release
+  command: amazon-linux-extras install -y epel
+  become: yes
+
+- name: install python 3.8
+  command: amazon-linux-extras install -y python3.8
+  become: yes
+
+- name: update yum packages
+  yum: list=updates update_cache=true
+
+#- name: install epel-release
+#  yum:
+#    name: epel-release
+#    state: latest
+
+- name: install rdate
+  yum:
+    name: rdate
+    state: latest
+
+- name: install unzip
+  yum:
+    name: unzip
+    state: latest
+
+- name: install bind-utils
+  yum:
+    name: bind-utils
+    state: latest
+
+- name: install git
+  yum:
+    name: git
+    state: latest
+
+#- name: install python3
+#  yum:
+#    name: python3
+#    state: latest
+
+#- name: python pip upgrade
+#  pip:
+#    name: pip
+#    extra_args: --upgrade
+#    executable: pip-3.6
+    #executable: pip
+
+#- name: python setuptools upgrade
+#  pip:
+#    name: setuptools
+#    extra_args: --upgrade
+#    executable: pip-3.6
+#    #executable: pip
+
+- name: set Asia/Seoul timezone
+  timezone:
+    name: Asia/Seoul
+
+- name: install AWS CloudWatch agent
+  command: sudo rpm -ivh https://s3.amazonaws.com/amazoncloudwatch-agent/centos/amd64/latest/amazon-cloudwatch-agent.rpm
+  become: yes
+
+- name: set time from time.bora.net
+  command: sudo rdate -s time.bora.net
+  become: yes

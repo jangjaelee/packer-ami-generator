@@ -1,0 +1,4 @@
+- name: enable nginx
+  systemd:
+    name: nginx
+    enabled: yes
