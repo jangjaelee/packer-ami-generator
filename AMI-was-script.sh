@@ -7,9 +7,9 @@ sudo yum -y install make gcc
 sudo yum -y install rdate
 sudo yum -y install python3
 sudo rdate -s time.bora.net
-sudo pip3 install setuptools --upgrade
 sudo pip3 install pip --upgrade
-sudo pip3 install ansible
+sudo pip install setuptools --upgrade
+sudo pip install ansible
 sudo yum -y install nginx
 sudo yum -y install git
 sudo amazon-linux-extras install -y php7.2
