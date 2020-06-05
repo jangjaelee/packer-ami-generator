@@ -63,8 +63,8 @@ Security=$(aws ec2 describe-security-groups --query 'SecurityGroups[*].{SG:Group
 Security=$(echo $Security | sed -e 's/None//g' -e 's/ //g')
 
 # Internal-ABL DNS name
-InternalALB=$(aws elbv2 describe-load-balancers --names ALB-awx-WAS --query 'LoadBalancers[*].{DNS:DNSName}' --output text)
-InternalALB=$(echo $InternalALB | sed -e 's/None//g' -e 's/ //g')
+#InternalALB=$(aws elbv2 describe-load-balancers --names ALB-awx-WAS --query 'LoadBalancers[*].{DNS:DNSName}' --output text)
+#InternalALB=$(echo $InternalALB | sed -e 's/None//g' -e 's/ //g')
 
 if [[ -z "${InternalALB}" ]]; then 
   InternalALB="was.awx.internal"
