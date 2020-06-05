@@ -100,7 +100,7 @@ echo -e '{
       "ssh_bastion_port": 22,
       "ssh_bastion_host": "'${IP}'",
       "ssh_bastion_username": "ec2-user",
-      "ssh_bastion_private_key_file": "~linux/terraform/rsa_key/awx_key.pem",
+      "ssh_bastion_private_key_file": "~/.ssh/id_rsa.pub",
       "vpc_id": "'${VPC}'",
       "subnet_id": "'${Subnet}'",
       "security_group_id": "'${Security}'",
