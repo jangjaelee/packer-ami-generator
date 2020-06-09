@@ -126,7 +126,8 @@ echo -e '{
   "provisioners": [
     {
       "type": "ansible",
-      "playbook_file": "playbook/main.yml"
+      "playbook_file": "playbook/main.yml",
+      "user": "'${ACCOUNT}'"
     },
     {
       "type": "shell",
