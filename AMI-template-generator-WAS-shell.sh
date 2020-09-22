@@ -5,7 +5,7 @@
 # * Title    : Packer AMI json template generator
 # * Auther   : Alex, Lee
 # * Created  : 2020-05-31
-# * Modified : 2020-06-05
+# * Modified : 2020-09-10
 # * E-mail   : cine0831@gmail.com
 #**/
 #
@@ -14,9 +14,9 @@
 
 # Tag Key:Value
 # If it is changed a Tag (Name, Values) of BastionSRV, Subnet, Security Group, require to change below variables
-BastionSRV="awx-bastion"
-Subnet="SN-private-2a-WEB"
-Security="SG-awx-private-web"
+BastionSRV=""
+Subnet=""
+Security=""
 
 
 ## for CentOS 7
@@ -43,7 +43,9 @@ AMI_ID="ami-01af223aa7f274198"
 AMI_DESCRIPTION="WEB Server on Amazon Linux 2 (x86_64)"
 
 # Account for AMI login user account
-ACCOUNT="ec2-user"
+#ACCOUNT="centos"  # CentOS
+#ACCOUNT="ubuntu"  # Ubuntu
+ACCOUNT="ec2-user" # Amazon Linux
 
 
 # VPC-ID
