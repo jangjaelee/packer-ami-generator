@@ -18,7 +18,7 @@ BastionSRV=""
 Subnet=""
 Security=""
 
-
+######################
 ## for CentOS 7
 # comment about AMI
 #COMMENT="WEB Server AMI (CentOS 7)"
@@ -28,10 +28,7 @@ Security=""
 
 # AMI Description
 #AMI_DESCRIPTION="WEB Server on Amazon Linux 2 (x86_64)"
-
-# Account for AMI login user account
-#ACCOUNT="centos"
-
+######################
 ## for Amazon Linux 2
 # comment about AMI
 COMMENT="WEB Server AMI (Amazon Linux 2))"
@@ -41,6 +38,7 @@ AMI_ID="ami-01af223aa7f274198"
 
 # AMI Description
 AMI_DESCRIPTION="WEB Server on Amazon Linux 2 (x86_64)"
+######################
 
 # Account for AMI login user account
 #ACCOUNT="centos"  # CentOS
